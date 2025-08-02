@@ -58,7 +58,53 @@ WHERE row_num > 1;
 
 ```
 
+3. Standardizing Text Fields
+- Removed extra spaces in company, industry, and country.
+- Standardized entries like Crypto... to just Crypto.
+- Removed trailing dots in country names.
+```sql
+# STANDARDIZE THE DATABASE 
+SELECT*
+FROM working_database2;
 
+SELECT DISTINCT(company) 
+FROM working_database2;
+
+UPDATE working_database2
+SET company = TRIM(company);
+
+SELECT DISTINCT(industry)
+FROM working_database2
+ORDER BY 1;
+
+
+UPDATE working_database2
+SET industry = 'Crypto'
+WHERE industry LIKE 'Crypto%';
+
+SELECT DISTINCT(country)
+FROM working_database2
+ORDER BY 1;
+
+SELECT country, TRIM(trailing '.' FROM country)
+FROM working_database2;
+
+UPDATE working_database2
+SET country = TRIM(trailing '.' FROM  country);
+
+# date formatting 
+SELECT `date`,
+STR_TO_DATE(`date`, '%m/%d/%Y')
+FROM working_database2;
+
+
+UPDATE working_database2
+SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
+
+-- Changing the datatype of some column
+ALTER TABLE working_database2
+MODIFY COLUMN `date` DATE;
+```
 
 
 
