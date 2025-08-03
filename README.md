@@ -3,9 +3,9 @@
 The primary objective of this project is to clean, standardize, and analyze a dataset of global layoffs to extract meaningful insights about patterns in layoffs across industries, countries, and companies over time.
 
 ## Dataset Used
-Name: `layoffs.csv`
-Description: The dataset contains records of employee layoffs across various companies, industries, countries, and timeframes, with features such as `company`, `location`, `industry`, `total_laid_off`, `percentage_laid_off`, `date`, `stage`, `country`, and `funds_raised_millions`.
-Dataset: 
+- Name: `layoffs.csv`
+- Description: The dataset contains records of employee layoffs across various companies, industries, countries, and timeframes, with features such as `company`, `location`, `industry`, `total_laid_off`, `percentage_laid_off`, `date`, `stage`, `country`, and `funds_raised_millions`.
+![Dataset](https://github.com/Venom3150/Working_with_SQL/blob/main/layoffs.csv)
 
 ## Part 1: Data Cleaning 
 ## 1. Copying Original Table
